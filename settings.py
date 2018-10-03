@@ -15,7 +15,7 @@ SESSION_CONFIGS = [
     {
        'name': 'lying_online',
        'display_name': "lying_online",
-       'num_demo_participants': 10,
+       'num_demo_participants': 1,
        'app_sequence': ['real_effort', 'word_search', 'model4'],
     },
 # {

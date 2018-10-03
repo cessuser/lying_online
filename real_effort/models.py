@@ -14,7 +14,7 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'real_effort'
     players_per_group = None
-    num_rounds = 70
+    num_rounds = 80
 
 class Subsession(BaseSubsession):
     def creating_session(self):
@@ -33,6 +33,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     answer = models.IntegerField()
     correct = models.IntegerField()
+    n_correct = models.IntegerField()
 
     def check_correct(self):
         if self.round_number == 1:
@@ -44,5 +45,6 @@ class Player(BasePlayer):
             self.participant.vars['n_correct'] += 1
         else:
             self.correct = 0
+        self.n_correct = self.participant.vars['n_correct']
 
 
