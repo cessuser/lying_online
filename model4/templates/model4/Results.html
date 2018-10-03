@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Model 4
+{% endblock %}
+
+{% block content %}
+<p>
+    We would like you to commit to a final task that will take place in two days – it will consist of one task that
+    will take no more than 5 minutes of your time.
+</p>
+<p>
+    If you agree to complete this task we will immediately add one pound to your earnings that you take home today.
+</p>
+<p>
+    If you agree, you only need to provide us with a contact e-mail and in two days we’ll send you a link to the short
+    survey for completion.
+</p>
+{% formfields %}
+    {% next_button %}
+{% endblock %}
+
+

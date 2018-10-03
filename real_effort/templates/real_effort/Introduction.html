@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+    <p>
+        This is a task-oriented online survey – you will be compensated for all of the choices you make
+        in this survey – it should only take 5 minutes to complete
+
+    </p>
+ <div class="next-btn" style="text-align:right;">{% next_button %}</div>
+{% endblock%}
