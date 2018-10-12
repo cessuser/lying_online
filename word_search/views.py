@@ -16,6 +16,9 @@ class WordsFound(Page):
     form_model = models.Player
     form_fields = ['words_found']
 
+    def before_next_page(self):
+        self.player.participant.vars['words_found'] = self.player.words_found
+        self.player.set_payoff()
 
 class RegularWaitPage(WaitPage):
 

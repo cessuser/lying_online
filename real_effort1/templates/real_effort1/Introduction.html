@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Second Round
+{% endblock %}
+
+{% block content %}
+    <p>
+        This is the second round of the survey. Please click next button to start
+
+    </p>
+ <div class="next-btn" style="text-align:right;">{% next_button %}</div>
+{% endblock%}

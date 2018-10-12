@@ -16,7 +16,7 @@ SESSION_CONFIGS = [
        'name': 'lying_online',
        'display_name': "lying_online",
        'num_demo_participants': 1,
-       'app_sequence': ['real_effort', 'word_search', 'model4'],
+       'app_sequence': ['real_effort', 'word_search', 'model4', 'real_effort1', 'word_search1'],
     },
 # {
 #        'name': 'lying_online2',
@@ -34,7 +34,7 @@ LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
-USE_POINTS = True
+USE_POINTS = False
 
 ROOMS = []
 

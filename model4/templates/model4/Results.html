@@ -17,7 +17,14 @@
     If you agree, you only need to provide us with a contact e-mail and in two days we’ll send you a link to the short
     survey for completion.
 </p>
-{% formfields %}
+{% formfield player.email %}
+<p>
+    Please choose whether you want to continue finishing the second round of the survey. If so, we will immediately add
+    {{ Constants.replicate_fee }} to your account and upon finish we will add extra {{ Constants.replicate_finish }}
+    <br>
+    {% formfield player.replicate %}
+</p>
+
     {% next_button %}
 {% endblock %}
 

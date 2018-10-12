@@ -13,11 +13,11 @@ as measure of cheating proclivity
 
 
 class Constants(BaseConstants):
-    name_in_url = 'word_search'
+    name_in_url = 'word_search1'
     players_per_group = None
     num_rounds = 1
 
-    word_puzzle_seconds = 10
+    word_puzzle_seconds = 90
 
 
 class Subsession(BaseSubsession):
@@ -36,4 +36,5 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect()
     )
     def set_payoff(self):
-        self.payoff = c(self.words_found * 0.25)
+        self.payoff = self.participant.vars['n_correct_real_effort'] * 0.2
+        self.payoff += self.participant.vars['words_found'] * 0.25 + 5
