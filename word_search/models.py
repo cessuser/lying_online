@@ -17,7 +17,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 1
 
-    word_puzzle_seconds = 10
+    word_puzzle_seconds = 90
 
 
 class Subsession(BaseSubsession):
