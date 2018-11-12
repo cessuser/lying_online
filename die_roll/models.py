@@ -45,3 +45,4 @@ class Player(BasePlayer):
     
     def set_payoff(self):
         self.payoff = self.die_roll * Constants.die_conversion
+        self.participant.vars['module2_payoff'] = self.payoff

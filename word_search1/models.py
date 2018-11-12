@@ -38,3 +38,4 @@ class Player(BasePlayer):
     def set_payoff(self):
         self.payoff = self.participant.vars['n_correct_real_effort'] * 0.2
         self.payoff += self.participant.vars['words_found'] * 0.25 + 5
+        self.payoff += self.participant.vars['module2_payoff']
