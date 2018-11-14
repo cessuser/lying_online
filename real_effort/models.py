@@ -46,6 +46,5 @@ class Player(BasePlayer):
         else:
             self.correct = 0
         self.n_correct = self.participant.vars['n_correct_real_effort']
-        self.payoff = self.participant.vars['n_correct_real_effort'] * 0.2
 
 

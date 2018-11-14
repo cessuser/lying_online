@@ -7,8 +7,6 @@ from .models import Constants
 class Introduction(Page):
     pass
 
-class Start(Page):
-    pass
 
 class WordPuzzle(Page):
     timeout_seconds = Constants.word_puzzle_seconds + 1
@@ -23,10 +21,9 @@ class WordsFound(Page):
 
 
 class PayInfo(Page):
-    pass
-
+    def vars_for_template(self):
+        self.player.payoff = 4
 page_sequence = [
-    Start,
     Introduction,
     WordPuzzle,
     WordsFound,

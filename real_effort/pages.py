@@ -47,8 +47,14 @@ class TaskPage(Page):
 #         pass
 
 
+class Results(Page):
+    def is_displayed(self):
+        return self.round_number == Constants.num_rounds
+    def vars_for_template(self):
+        self.player.payoff = self.player.participant.vars['n_correct_real_effort']*0.2
 
 page_sequence = [
     Introduction,
     TaskPage,
+    Results
 ]

@@ -2,12 +2,13 @@
 {% load otree static %}
 
 {% block title %}
-    Result
+    End of module 1
 {% endblock %}
 
 {% block content %}
-<p> You have answered {{ n_correct }} questions correctly</p>
-<div class="next-btn" style="text-align:right;">{% next_button %}</div>
+    This is the end of module 1
+<br><br>
+    {% next_button %}
 {% endblock %}
 
 

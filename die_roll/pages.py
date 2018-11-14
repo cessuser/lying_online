@@ -8,7 +8,7 @@ class Instructions(Page):
         return {"example_4": Constants.die_conversion * 4,
                 "example_1": Constants.die_conversion * 1}
 
-class Dice(Page):
+class DiceRolling(Page):
     form_model = 'player'
     form_fields = ['die_roll']
 
@@ -30,5 +30,5 @@ class Results(Page):
 
 page_sequence = [
     Instructions,
-    Dice,
+    DiceRolling,
 ]

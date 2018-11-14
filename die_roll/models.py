@@ -41,7 +41,8 @@ class Group(BaseGroup):
     pass
 
 class Player(BasePlayer):
-    die_roll = models.IntegerField(min = 0, max = 6)
+    die_roll = models.IntegerField(min = 0, max = 6, label="Please enter the number of the dice")
+    virtual_dice = models.IntegerField()
     
     def set_payoff(self):
         self.payoff = self.die_roll * Constants.die_conversion
