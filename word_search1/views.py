@@ -26,7 +26,7 @@ class PayInfo(Page):
     pass
 
 page_sequence = [
-    Start,gi
+    Start,
     Introduction,
     WordPuzzle,
     WordsFound,
