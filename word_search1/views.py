@@ -7,6 +7,9 @@ from .models import Constants
 class Introduction(Page):
     pass
 
+class Start(Page):
+    pass
+
 class WordPuzzle(Page):
     timeout_seconds = Constants.word_puzzle_seconds + 1
 
@@ -23,6 +26,7 @@ class PayInfo(Page):
     pass
 
 page_sequence = [
+    Start,gi
     Introduction,
     WordPuzzle,
     WordsFound,

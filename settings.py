@@ -23,7 +23,7 @@ SESSION_CONFIGS = [
         'display_name': "lying_online_retake",
         'num_demo_participants': 1,
         'retake': 1,
-        'app_sequence': ['real_effort1','die_roll1', 'word_search1', 'model4'],
+        'app_sequence': ['die_roll1', 'word_search1', 'model4'],
     },
 
 ]
