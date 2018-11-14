@@ -14,7 +14,7 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'real_effort'
     players_per_group = None
-    num_rounds = 80
+    num_rounds = 60
 
 class Subsession(BaseSubsession):
     def creating_session(self):
@@ -46,5 +46,6 @@ class Player(BasePlayer):
         else:
             self.correct = 0
         self.n_correct = self.participant.vars['n_correct_real_effort']
+        self.payoff = self.participant.vars['n_correct_real_effort'] * 0.2
 
 

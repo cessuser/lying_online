@@ -29,10 +29,18 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    email = models.StringField(widget=widgets.TextInput, blank=True)
-    replicate = models.StringField(choices=['Yes', 'No'], widget=widgets.RadioSelect, label="Do you want to continue? ")
+    final_payoff = models.CurrencyField()
+    email = models.StringField(widget=widgets.TextInput)
+    replicate = models.StringField(choices=['Yes', 'No'], widget=widgets.RadioSelect, label="Do you want to participate the second round of the survey? ")
 
     def set_payoff(self):
-        self.payoff = self.participant.vars['n_correct_real_effort'] * 0.2
-        self.payoff += self.participant.vars['words_found'] * 0.25
+        self.final_payoff = self.participant.vars['n_correct_real_effort'] * 0.2
+        self.final_payoff += self.participant.vars['words_found'] * 0.25
+        self.final_payoff += self.participant.vars['module2_payoff']
+
+        if self.replicate == 'Yes' and self.session.config['retake'] == 0:
+            self.payoff = 1
+            self.final_payoff += 1
+        if self.session.config['retake'] == 1:
+            self.payoff = 4
 

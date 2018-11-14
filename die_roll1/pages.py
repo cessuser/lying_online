@@ -12,9 +12,6 @@ class Dice(Page):
     form_model = 'player'
     form_fields = ['die_roll']
 
-    def before_next_page(self):
-        self.player.set_payoff()
-        print("Payoff set" + str(self.player.payoff))
 
 
 

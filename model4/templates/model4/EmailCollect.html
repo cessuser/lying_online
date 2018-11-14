@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+    Email Collect
+{% endblock %}
+{% block content %}
+
+<p>
+    Since you agree to complete this task, we will immediately add one pound to your earnings that you take home today.
+</p>
+<p>
+    Before we adding the 1 pound to your account, please provide us with a contact <strong>e-mail</strong> and in two days we’ll send you a link to the short
+    survey for completion.
+</p>
+{% formfield player.email %}
+
+<p><h5>Please click the next button to confirm your payment !</h5></p>
+
+    {% next_button %}
+{% endblock %}
+
+

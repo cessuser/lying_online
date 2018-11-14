@@ -2,10 +2,11 @@
 {% load otree static %}
 
 {% block title %}
-    Model 4
-{% endblock %}
 
+    Last Task
+{% endblock %}
 {% block content %}
+
 <p>
     We would like you to commit to a final task that will take place in two days – it will consist of one task that
     will take no more than 5 minutes of your time.
@@ -16,8 +17,6 @@
 <p>
     If you agree, you only need to provide us with a contact e-mail and in two days we’ll send you a link to the short
     survey for completion.
-</p>
-{% formfield player.email %}
 <p>
     Please choose whether you want to continue finishing the second round of the survey. If so, we will immediately add
     {{ Constants.replicate_fee }} to your account and upon finish we will add extra {{ Constants.replicate_finish }}
@@ -25,7 +24,10 @@
     {% formfield player.replicate %}
 </p>
 
+<p><h5>Please click the next button to confirm your payment.</h5></p>
+
     {% next_button %}
+
 {% endblock %}
 
 

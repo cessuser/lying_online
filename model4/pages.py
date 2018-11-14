@@ -7,26 +7,34 @@ from . import models
 
 class Results(Page):
     form_model = models.Player
-    form_fields = ['email', 'replicate']
+    form_fields = ['replicate']
 
-    def vars_for_template(self):
-        self.player.set_payoff()
 
     def before_next_page(self):
         self.player.participant.vars['replicate'] = self.player.replicate
+        self.player.set_payoff()
 
+class EmailCollect(Page):
+    form_fields = ['email']
+    form_model = models.Player
+
+    def is_displayed(self):
+        return self.player.replicate == 'Yes'
 
 class PayInfo(Page):
-    def is_displayed(self):
-        return self.player.participant.vars['replicate'] == 'No'
-
     def vars_for_template(self):
+        msg = ''
+        if self.player.replicate == 'Yes':
+            msg = 'Because you agree to participate the second round of the survey, we add $1 to your account now.'
         return {
+            'msg': msg,
             'part1': c(self.player.participant.vars['n_correct_real_effort'] * 0.2),
-            'part3': c(self.player.participant.vars['words_found'] * 0.2),
-            'total': self.player.payoff
+            'part2': self.player.participant.vars['module2_payoff'],
+            'part3': c(self.player.participant.vars['words_found'] * 0.25),
+            'total': self.player.final_payoff
         }
 page_sequence = [
     Results,
+    EmailCollect,
     PayInfo
 ]

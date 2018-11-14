@@ -39,5 +39,3 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     die_roll = models.IntegerField(min = 0, max = 6)
     
-    def set_payoff(self):
-        self.payoff = self.die_roll * Constants.die_conversion

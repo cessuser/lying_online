@@ -25,17 +25,10 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    def set_word_search_payoff(self):
-        for p in self.get_players():
-            p.payoff = p.words_found
-
+    pass
 
 class Player(BasePlayer):
     words_found = models.PositiveIntegerField(
         choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         widget=widgets.RadioSelect()
     )
-    def set_payoff(self):
-        self.payoff = self.participant.vars['n_correct_real_effort'] * 0.2
-        self.payoff += self.participant.vars['words_found'] * 0.25 + 5
-        self.payoff += self.participant.vars['module2_payoff']

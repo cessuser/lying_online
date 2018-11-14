@@ -20,20 +20,6 @@ class WordsFound(Page):
         self.player.participant.vars['words_found'] = self.player.words_found
         self.player.set_payoff()
 
-class RegularWaitPage(WaitPage):
-
-    def after_all_players_arrive(self):
-        pass
-
-
-class ResultsWaitPage(WaitPage):
-
-    def after_all_players_arrive(self):
-        self.group.set_word_search_payoff()
-
-
-class Results(Page):
-    pass
 
 
 page_sequence = [

@@ -13,11 +13,11 @@ class Introduction(Page):
 class TaskPage(Page):
     form_fields = ['answer']
     form_model = models.Player
-    timeout_seconds = 300
+    timeout_seconds = 60
 
     def is_displayed(self):
         if self.round_number == 1:
-            self.player.participant.vars['remaining_time'] = 300
+            self.player.participant.vars['remaining_time'] = 60
         self.player.participant.vars['time_onLoad'] = time.time()
         return self.player.participant.vars['remaining_time'] > 0 and 1 <= self.round_number <= Constants.num_rounds
 
