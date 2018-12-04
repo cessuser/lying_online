@@ -14,18 +14,18 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
     {
         'name': 'lying_online',
-        'display_name': "lying_online",
+        'display_name': "experiment1",
         'num_demo_participants': 1,
         'retake':0,
         'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
     },
-    {
-        'name': 'lying_online_retake',
-        'display_name': "lying_online_retake",
-        'num_demo_participants': 1,
-        'retake': 1,
-        'app_sequence': ['die_roll1', 'word_search1'],
-    },
+    # {
+    #     'name': 'lying_online_retake',
+    #     'display_name': "experiment_retake",
+    #     'num_demo_participants': 1,
+    #     'retake': 1,
+    #     'app_sequence': ['die_roll1', 'word_search1'],
+    # },
 
 ]
 
