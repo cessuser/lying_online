@@ -21,7 +21,9 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
+    def creating_session(self):
+        for p in self.get_players():
+            p.test = self.session.config['test']
 
 
 class Group(BaseGroup):
@@ -32,6 +34,8 @@ class Player(BasePlayer):
     final_payoff = models.CurrencyField()
     email = models.StringField(widget=widgets.TextInput)
     replicate = models.StringField(choices=['Yes', 'No'], widget=widgets.RadioSelect, label="Do you want to participate the second round of the survey? ")
+    test = models.IntegerField()
+
 
     def set_payoff(self):
         self.final_payoff = self.participant.vars['n_correct_real_effort'] * 0.2
