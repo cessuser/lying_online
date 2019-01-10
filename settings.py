@@ -38,7 +38,12 @@ LANGUAGE_CODE = 'en'
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = False
 
-ROOMS = []
+ROOMS = [
+    {
+        'name': 'test',
+        'display_name': 'test_US',
+    },
+]
 
 
 # AUTH_LEVEL:
