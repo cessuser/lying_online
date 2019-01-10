@@ -17,6 +17,7 @@ SESSION_CONFIGS = [
         'display_name': "experiment1",
         'num_demo_participants': 1,
         'retake':0,
+        'test': 1,
         'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
     },
     # {
