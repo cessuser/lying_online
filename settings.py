@@ -41,9 +41,13 @@ USE_POINTS = False
 
 ROOMS = [
     {
+        'name': 'test_label',
+        'display_name': 'test_US_label',
+        'participant_label_file': '_rooms/test_US.txt',
+    },
+    {
         'name': 'test',
         'display_name': 'test_US',
-        'participant_label_file': '_rooms/test_US.txt',
     },
 ]
 
