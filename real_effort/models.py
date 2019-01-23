@@ -34,8 +34,10 @@ class Player(BasePlayer):
     answer = models.IntegerField()
     correct = models.IntegerField()
     n_correct = models.IntegerField()
+    test = models.IntegerField()
 
     def check_correct(self):
+
         if self.round_number == 1:
             self.participant.vars['n_correct_real_effort'] = 0
         correct_answer = self.participant.vars['nums1'][self.round_number-1] \

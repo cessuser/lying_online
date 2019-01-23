@@ -43,6 +43,7 @@ ROOMS = [
     {
         'name': 'test',
         'display_name': 'test_US',
+        'participant_label_file': '_rooms/test_US.txt',
     },
 ]
 
