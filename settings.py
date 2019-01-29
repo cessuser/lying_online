@@ -14,7 +14,7 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
     {
         'name': 'lying_online',
-        'display_name': "experiment1",
+        'display_name': "first",
         'num_demo_participants': 1,
         'retake':0,
         'test': 1,
