@@ -4,11 +4,13 @@ from otree.api import (
 )
 
 
-author = 'David Klinowski'
+author = 'David Klinowski Danlin Chen'
 
 doc = """
 Show word search puzzle and prompt for number of words found from given list (none of which actually appear on puzzle)
 as measure of cheating proclivity
+
+number of choices changed, puzzle picture changed
 """
 
 
@@ -17,7 +19,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 1
 
-    word_puzzle_seconds = 90
+    word_puzzle_seconds = 60
 
 
 class Subsession(BaseSubsession):
@@ -32,8 +34,9 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     words_found = models.PositiveIntegerField(
-        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15],
         widget=widgets.RadioSelect()
     )
+
     def set_payoff(self):
         self.payoff = c(self.words_found * 0.25)
