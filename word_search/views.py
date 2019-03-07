@@ -14,10 +14,17 @@ class WordPuzzle(Page):
 
 class WordsFound(Page):
     form_model = models.Player
-    form_fields = ['words_found']
+    form_fields = ['cows_found1']
+
+    def get_form_fields(self):
+        if self.session.config['version'] == 2:
+            return ['cows_found2']
 
     def before_next_page(self):
-        self.player.participant.vars['words_found'] = self.player.words_found
+        if self.session.config['version'] == 1:
+            self.player.participant.vars['words_found'] = self.player.cows_found1
+        else:
+            self.player.participant.vars['words_found'] = self.player.cows_found2
         self.player.set_payoff()
 
 

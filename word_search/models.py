@@ -20,6 +20,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     word_puzzle_seconds = 60
+    prize = c(0.25)
 
 
 class Subsession(BaseSubsession):
@@ -33,10 +34,13 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    words_found = models.PositiveIntegerField(
-        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15],
-        widget=widgets.RadioSelect()
+    cows_found1 = models.IntegerField(min=0, max=100)
+    cows_found2 = models.IntegerField(
+        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],
     )
 
     def set_payoff(self):
-        self.payoff = c(self.words_found * 0.25)
+        if self.session.config['version'] == 1:
+            self.payoff = self.cows_found1 * Constants.prize
+        else:
+            self.payoff = self.cows_found2 * Constants.prize
