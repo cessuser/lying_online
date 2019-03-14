@@ -20,7 +20,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     word_puzzle_seconds = 60
-    prize = c(0.25)
+    prize = c(0.1)
 
 
 class Subsession(BaseSubsession):
@@ -34,8 +34,9 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    cows_found1 = models.IntegerField(min=0, max=100)
+    cows_found1 = models.IntegerField(min=0, max=100, label='How many cows did you find in the picture? You will get ' + str(Constants.prize) + ' for each cow you find.')
     cows_found2 = models.IntegerField(
+        label='How many cows did you find in the picture? You will get ' + str(Constants.prize) +  ' for each cow you find.',
         choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],
     )
 

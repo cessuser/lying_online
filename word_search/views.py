@@ -14,10 +14,11 @@ class WordPuzzle(Page):
 
 class WordsFound(Page):
     form_model = models.Player
-    form_fields = ['cows_found1']
 
     def get_form_fields(self):
-        if self.session.config['version'] == 2:
+        if self.session.config['version'] == 1:
+            return ['cows_found1']
+        else:
             return ['cows_found2']
 
     def before_next_page(self):
