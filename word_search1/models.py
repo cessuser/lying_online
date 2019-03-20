@@ -16,7 +16,7 @@ class Constants(BaseConstants):
     name_in_url = 'word_search1'
     players_per_group = None
     num_rounds = 1
-
+    prize = c(0.25)
     word_puzzle_seconds = 90
 
 

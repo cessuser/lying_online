@@ -18,14 +18,11 @@ class WordsFound(Page):
 
     def before_next_page(self):
         self.player.participant.vars['words_found'] = self.player.words_found
+        self.player.payoff = self.player.words_found * Constants.prize
 
 
-class PayInfo(Page):
-    def vars_for_template(self):
-        self.player.payoff = 4
 page_sequence = [
     Introduction,
     WordPuzzle,
     WordsFound,
-    PayInfo
 ]

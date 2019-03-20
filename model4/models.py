@@ -42,9 +42,9 @@ class Player(BasePlayer):
         self.final_payoff += self.participant.vars['words_found'] * 0.25
         self.final_payoff += self.participant.vars['module2_payoff']
 
-        if self.replicate == 'Yes' and self.session.config['retake'] == 0:
-            self.payoff = 1
-            self.final_payoff += 1
-        if self.session.config['retake'] == 1:
-            self.payoff = 4
+        # if self.replicate == 'Yes' and self.session.config['retake'] == 0:
+        #     self.payoff = 1
+        #     self.final_payoff += 1
+        # if self.session.config['retake'] == 1:
+        #     self.payoff = 4
 

@@ -27,7 +27,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 1
     show_app_name = "die_roll"
-    die_conversion = c(1)
+    die_conversion = c(0.2)
 
 
     cheat_tax_choices = tuple([('0', "Always justified")] + LEFT_RIGHT_CHOICES + [('10', "Never justified")])
