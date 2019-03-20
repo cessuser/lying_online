@@ -15,6 +15,7 @@ class Constants(BaseConstants):
     name_in_url = 'model4'
     players_per_group = None
     num_rounds = 1
+    retake = c(4)
 
     replicate_fee = c(1)
     replicate_finish = c(4)
@@ -45,6 +46,6 @@ class Player(BasePlayer):
         # if self.replicate == 'Yes' and self.session.config['retake'] == 0:
         #     self.payoff = 1
         #     self.final_payoff += 1
-        # if self.session.config['retake'] == 1:
-        #     self.payoff = 4
+        if self.session.config['retake'] == 1:
+            self.payoff = 4
 

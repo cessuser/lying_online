@@ -28,7 +28,8 @@ class PayInfo(Page):
     def vars_for_template(self):
         self.player.set_payoff()
         msg = ''
-        if self.player.replicate == 'Yes':
+        if self.session.config['retake'] == 1:
+            msg = 'Additional payoff for retaking the survey: ' + Constants.retake
             msg = 'Because you agree to participate the second round of the survey, we add $1 to your account now.'
         return {
             'msg': msg,
