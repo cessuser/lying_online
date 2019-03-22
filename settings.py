@@ -32,11 +32,23 @@ SESSION_CONFIGS = [
     # },
 
     {
-        'name': 'lying_online_retake',
-        'display_name': "experiment_retake",
+        'name': 'lying_online_retake_UK',
+        'display_name': "experiment_retake_UK",
         'num_demo_participants': 1,
         'retake': 1,
         'test': 1,
+        'UK': True,
+        'Ireland': False,
+        'app_sequence': ['real_effort', 'die_roll', 'word_search1', 'model4'],
+    },
+    {
+        'name': 'lying_online_retake_Ireland',
+        'display_name': "experiment_retake_Ireland",
+        'num_demo_participants': 1,
+        'retake': 1,
+        'test': 1,
+        'UK': False,
+        'Ireland': True,
         'app_sequence': ['real_effort', 'die_roll', 'word_search1', 'model4'],
     },
 

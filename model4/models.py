@@ -36,6 +36,7 @@ class Player(BasePlayer):
     email = models.StringField(widget=widgets.TextInput)
     replicate = models.StringField(choices=['Yes', 'No'], widget=widgets.RadioSelect, label="Do you want to participate the second round of the survey? ")
     test = models.IntegerField()
+    link = models.StringField()
 
 
     def set_payoff(self):
