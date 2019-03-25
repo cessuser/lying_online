@@ -12,45 +12,46 @@ SESSION_CONFIG_DEFAULTS = {
 }
 
 SESSION_CONFIGS = [
-    # {
-    #     'name': 'lying_online_v1',
-    #     'display_name': "version1",
-    #     'num_demo_participants': 1,
-    #     'retake':0,
-    #     'test': 1,
-    #     'version': 1,
-    #     'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
-    # },
-    # {
-    #     'name': 'lying_online_v2',
-    #     'display_name': "version2",
-    #     'num_demo_participants': 1,
-    #     'retake':0,
-    #     'test': 1,
-    #     'version': 2,
-    #     'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
-    # },
+    {
+        'name': 'lying_online_v1_USA',
+        'display_name': "version1_USA",
+        'num_demo_participants': 1,
+        'retake':0,
+        'test': 1,
+        'version': 1,
+        'US': True,
+        'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
+    },
+    {
+        'name': 'lying_online_v2_USA',
+        'display_name': "version2_USA",
+        'num_demo_participants': 1,
+        'retake':0,
+        'test': 1,
+        'version': 2,
+        'US':True,
+        'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
+    },
 
-    {
-        'name': 'lying_online_retake_UK',
-        'display_name': "experiment_retake_UK",
-        'num_demo_participants': 1,
-        'retake': 1,
-        'test': 1,
-        'UK': True,
-        'Ireland': False,
-        'app_sequence': ['real_effort', 'die_roll', 'word_search1', 'model4'],
-    },
-    {
-        'name': 'lying_online_retake_Ireland',
-        'display_name': "experiment_retake_Ireland",
-        'num_demo_participants': 1,
-        'retake': 1,
-        'test': 1,
-        'UK': False,
-        'Ireland': True,
-        'app_sequence': ['real_effort', 'die_roll', 'word_search1', 'model4'],
-    },
+    # {
+    #     'name': 'lying_online_retake_USA',
+    #     'display_name': "experiment_retake_USA",
+    #     'num_demo_participants': 1,
+    #     'retake': 1,
+    #     'test': 1,
+    #     'US': True,
+    #     'app_sequence': ['real_effort', 'die_roll', 'word_search1', 'model4'],
+    # },
+    # {
+    #     'name': 'lying_online_retake_Ireland',
+    #     'display_name': "experiment_retake_Ireland",
+    #     'num_demo_participants': 1,
+    #     'retake': 1,
+    #     'test': 1,
+    #     'UK': False,
+    #     'Ireland': True,
+    #     'app_sequence': ['real_effort', 'die_roll', 'word_search1', 'model4'],
+    # },
 
 ]
 
@@ -71,7 +72,7 @@ ROOMS = [
     },
     {
         'name': 'test',
-        'display_name': 'test_US',
+        'display_name': 'test_USA',
     },
 ]
 

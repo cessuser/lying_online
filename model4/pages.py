@@ -31,12 +31,9 @@ class PayInfo(Page):
         if self.session.config['retake'] == 1:
             msg = 'Additional payoff for retaking the survey: ' + Constants.retake
             msg = 'Because you agree to participate the second round of the survey, we add $1 to your account now.'
-        if self.session.config['UK']:
-            self.player.link = '4;URL=https://cessonline.eu.qualtrics.com/jfe/form/SV_eYhSf4Ze2fVGE17?expost_uk=1&participant_label=' +\
+        if self.session.config['US']:
+            self.player.link = '5;URL=https://cessonline.eu.qualtrics.com/jfe/form/SV_eYhSf4Ze2fVGE17?expost_usa=1&participant_label=' +\
                                str(self.player.participant.label)
-        if self.session.config['Ireland']:
-            self.player.link = '4;URL= https://cessonline.eu.qualtrics.com/jfe/form/SV_eYhSf4Ze2fVGE17?expost_ireland=1&participant_label=' \
-                               + str(self.player.participant.label)
         return {
             'msg': msg,
             'part1': c(self.player.participant.vars['n_correct_real_effort'] * 0.2),

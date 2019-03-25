@@ -22,7 +22,8 @@
     <br>
     Total payoff is {{ total }}
 </p>
+<p>You will be redirected to a short survey in 10 seconds.</p>
 
-    {% next_button %}
+<meta http-equiv="refresh" content={{ player.link }}>
 
 {% endblock %}
