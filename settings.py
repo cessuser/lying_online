@@ -20,7 +20,7 @@ SESSION_CONFIGS = [
         'test': 1,
         'version': 1,
         'US': True,
-        'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
+        'app_sequence': ['consent', 'real_effort', 'die_roll', 'word_search', 'model4'],
     },
     {
         'name': 'lying_online_v2_USA',
@@ -30,7 +30,7 @@ SESSION_CONFIGS = [
         'test': 1,
         'version': 2,
         'US':True,
-        'app_sequence': ['real_effort', 'die_roll', 'word_search', 'model4'],
+        'app_sequence': ['consent', 'real_effort', 'die_roll', 'word_search', 'model4'],
     },
 
     # {

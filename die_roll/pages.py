@@ -17,17 +17,6 @@ class DiceRolling(Page):
         print("Payoff set" + str(self.player.payoff))
 
 
-
-class ResultsWaitPage(WaitPage):
-
-    def after_all_players_arrive(self):
-        pass
-
-
-class Results(Page):
-    pass
-
-
 page_sequence = [
     Instructions,
     DiceRolling,

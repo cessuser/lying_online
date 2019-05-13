@@ -10,7 +10,7 @@ class Results(Page):
     form_fields = ['replicate']
 
     def is_displayed(self):
-        return self.session.config['test'] == 0
+        return self.session.config['test'] == 0 and self.player.participant.vars['consent']
 
     def before_next_page(self):
         self.player.participant.vars['replicate'] = self.player.replicate
@@ -25,6 +25,9 @@ class EmailCollect(Page):
 
 
 class PayInfo(Page):
+    def is_displayed(self):
+        return self.player.participant.vars['consent']
+
     def vars_for_template(self):
         self.player.set_payoff()
         msg = ''

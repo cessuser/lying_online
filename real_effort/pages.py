@@ -39,14 +39,6 @@ class TaskPage(Page):
             self.player.participant.vars['remaining_time'] = 0
 
 
-
-
-# class ResultsWaitPage(WaitPage):
-#
-#     def after_all_players_arrive(self):
-#         pass
-
-
 class Results(Page):
     def is_displayed(self):
         return self.round_number == Constants.num_rounds
