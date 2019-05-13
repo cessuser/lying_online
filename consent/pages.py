@@ -9,12 +9,15 @@ class MyPage(Page):
     form_model = models.Player
 
     def app_after_this_page(self, upcoming_apps):
+        self.player.participant.vars['consent'] = True
         if self.player.consent == 'No':
             self.player.participant.vars['consent'] = False
             return upcoming_apps[-1]
 
     def before_next_page(self):
-        self.player.participant.vars['consent'] = False
+        self.player.participant.vars['consent'] = True
+        if self.player.consent == 'No':
+            self.player.participant.vars['consent'] = False
 
 
 page_sequence = [

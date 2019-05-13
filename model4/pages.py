@@ -26,7 +26,7 @@ class EmailCollect(Page):
 
 class PayInfo(Page):
     def is_displayed(self):
-        return self.player.participant.vars['consent']
+        return self.player.participant.vars['consent'] != False
 
     def vars_for_template(self):
         self.player.set_payoff()
